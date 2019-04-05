@@ -10,7 +10,7 @@ export const pipe = (...fns) => value =>
 export const takeUntil = (times, fn) =>
   () => times-- > 0 && fn();
 
-export const debounceTime = (milleseconds, fn) => {
+export const debounceTime = (milliseconds, fn) => {
   let timer = 0;
   return () => {
     clearTimeout(timer);
