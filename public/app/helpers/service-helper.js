@@ -1,5 +1,5 @@
 import { handleStatus } from '../helpers/promise-helper.js';
-import { partialize, compose } from './operators.js';
+import { partialize, pipe } from './operators.js';
 
 const _API = 'http://localhost:3000/notes';
 
@@ -15,13 +15,17 @@ export const notesService = {
       .catch(err => {
         console.log(err);
         return Promise.reject('An error ocurred in server!');
-      })
+      });
   },
 
   sumItems(code) {
 
     const filterItems = partialize(getItemsByCode, code);
-    const sumItems = compose(getSumOfItems, filterItems, getItemsForNotes);
+    const sumItems = pipe(
+      getItemsForNotes,
+      filterItems,
+      getSumOfItems
+    );
 
     return this.listAll()
       .then(sumItems);

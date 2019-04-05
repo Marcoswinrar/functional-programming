@@ -12,7 +12,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'internal server error' });
 });
 
-require('../routes/nota')(app);
+require('../routes/note')(app);
 
 app.use('*', (req, res) => {
   const message = `${req.originalUrl} not found`;
