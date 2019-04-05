@@ -14,6 +14,6 @@ export const debounceTime = (milliseconds, fn) => {
   let timer = 0;
   return () => {
     clearTimeout(timer);
-    timer = setTimeout(fn, milleseconds);
+    timer = setTimeout(fn, milliseconds);
   }
 }  
