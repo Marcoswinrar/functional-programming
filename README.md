@@ -1,5 +1,5 @@
 ### Functional programming.  
 
-* clone  
-* npm i  
-* node server
+`clone`    
+`npm i `    
+` node server`
