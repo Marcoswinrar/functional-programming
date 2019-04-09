@@ -1,5 +1,12 @@
 ### Functional programming.  
 
-`clone`    
-`npm i `    
-` node server`
+```
+### clone project
+clone
+
+### dowload dependencies
+npm i     
+
+### run application 
+node server
+```
